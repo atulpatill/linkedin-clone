@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchIcon from '@mui/icons-material/Search';
 
 function Header() {
     return (
@@ -8,7 +9,7 @@ function Header() {
                  <img src = "https://cdn-icons.flaticon.com/png/128/3536/premium/3536505.png?token=exp=1633848944~hmac=60c4423e04b9a96275fcd326d6b22469"/>
                 </div>
                 <div className = "header__search">
-
+                  <SearchIcon />
                 </div>
 
             </div>
