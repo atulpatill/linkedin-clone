@@ -1,6 +1,13 @@
 import React from 'react'
 import SearchIcon from '@material-ui/icons/Search';
 import "./css/header.css";
+import Headeroptions from './Headeroptions';
+import HomeIcon from '@material-ui/icons/Home';
+import PeopleIcon from '@material-ui/icons/People'; 
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+import MessageIcon from '@material-ui/icons/Message';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import { Avatar } from '@material-ui/core';
 function Header() {
     return (
         <div className = "header">
@@ -15,6 +22,12 @@ function Header() {
 
             </div>
             <div className = "header__right">
+                <Headeroptions Icon = {HomeIcon} title = "Home" />
+                <Headeroptions Icon = {PeopleIcon} title = "My Network" />
+                <Headeroptions Icon = {BusinessCenterIcon} title = "Jobs" />
+                <Headeroptions Icon = {MessageIcon} title = "Messaging" />
+                <Headeroptions Icon = {NotificationsIcon} title = "Notification" />
+                <Headeroptions avatar = {Avatar} title = "Atul Patil" />
                 
            </div>
             
