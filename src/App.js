@@ -4,6 +4,7 @@ import Sidebar from './Sidebar';
 import Feed from './Feed';
 
 
+
 function App() {
   return (
     <div className = "app_wrapper">
@@ -12,6 +13,7 @@ function App() {
          <div className = "app_body">
            <Sidebar />
            <Feed />
+         
          </div>
 
     </div>
