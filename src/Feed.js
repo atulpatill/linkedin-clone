@@ -44,7 +44,10 @@ function Feed(){
        </div>
      
        </div>
-       <Post />
+       <Post/>
+       <Post/>
+       <Post/>
+       
     </div>
    )
 }
