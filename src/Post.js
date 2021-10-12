@@ -8,23 +8,23 @@ import ShareIcon from '@material-ui/icons/Share';
 import SendIcon from '@material-ui/icons/Send';
 
 
-function Post() {
+function Post({name , description, message , photoURL}) {
     return (
         <div className = "posts">
             <div className ="post__header">
                 <div className ="post__headerLeft">
-                    <Avatar />
+                    <Avatar  src= {photoURL} />
                     <div className="post_profile_details">
-                        <h3>Atul Patil</h3>
+                        <h3>{name}</h3>
 
-                        <p>Lets build linkedIn clone</p>
+                        <p>{description}</p>
                     </div>
                  
                 </div>
                 <MoreVertIcon />
             </div>
             <div className ="post__body">
-                <p>This is test post, we are learning Reactjs</p>
+                <p>{message}</p>
             </div>
             <div className ="post__footer">
                 <div className ="post__footer__option">

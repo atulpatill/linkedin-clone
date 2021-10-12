@@ -44,9 +44,8 @@ function Feed(){
        </div>
      
        </div>
-       <Post/>
-       <Post/>
-       <Post/>
+       <Post name= "Atul Patil" description="MERN stack developer" message="we are learning reactjs" photoURL="https://i2.wp.com/ritsin.com/wp-content/uploads/2013/12/lord-krishna-saviour-of-pandavas1.jpeg?w=684"/>
+      
        
     </div>
    )
