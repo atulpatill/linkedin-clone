@@ -1,4 +1,7 @@
-import firebase from 'firebase'
+import firebase from "firebase";
+
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyC2mYsRBvn7osvm1OE5h-y35IoGUptdLoo",
     authDomain: "linkedin-clone-ea9b2.firebaseapp.com",
@@ -9,8 +12,8 @@ const firebaseConfig = {
   };
 
 
-  const firebaseApp = firebase.initializeApp(firebaseConfig)
+  const firebaseApp = firebase.initializeApp(firebaseConfig);
 
   const db = firebase.firestore();
 
-  export {db}
+  export { db }
