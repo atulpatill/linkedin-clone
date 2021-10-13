@@ -38,7 +38,7 @@ const register = (e) => {
         }).then(()=> {
             dispatch(loginuser({
             email: userAuth.user.email,
-            uid : userAuth.uid.user,
+            uid : userAuth.user.uid,
             photoURL:photoURL,
             displayName:name
             }))
