@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { loginuser } from './features/userSlice'
 import "./css/login.css"
+import { auth } from "./firebase"
 
 
 function Login() {
@@ -9,6 +12,8 @@ const [name , setName] =  useState("")
 const [photoURL , setPhotoURL] =  useState("")
 const [email , setEmail] =  useState("")
 const [password , setPassword] =  useState("")
+
+const dispatch = useDispatch();
 
 const register = (e) => {
     e.preventDefault();
@@ -25,6 +30,21 @@ const register = (e) => {
     if(!password){
         return alert("password is required");
     }
+
+    auth.createUserWithEmailAndPassword(email ,password).then((userAuth) =>{
+        userAuth.user.updateProfile({
+            displayName : name ,
+            photoURL : photoURL
+        }).then(()=> {
+            dispatch(loginuser({
+            email: userAuth.user.email,
+            uid : userAuth.uid.user,
+            photoURL:photoURL,
+            displayName:name
+            }))
+        })
+    }).catch(error => alert(error));
+
     setName("");
     setPhotoURL("");
     setEmail("");
