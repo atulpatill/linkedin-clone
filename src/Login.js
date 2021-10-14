@@ -59,6 +59,15 @@ const signIn = (e) =>{
     if(!password){
         return alert("password is required");
     }
+
+    auth.signInWithEmailAndPassword(email,password).then(({user}) =>{
+        dispatch(loginuser({
+            email: user.email,
+            uid : user.uid,
+            photoURL:user.photoURL,
+            displayName: user.name
+            }))
+    }).catch(error =>alert(error));
 }
     return (
         <>
