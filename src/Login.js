@@ -31,7 +31,7 @@ const register = (e) => {
         return alert("password is required");
     }
 
-    auth.createUserWithEmailAndPassword(email ,password).then((userAuth) =>{
+    auth.createUserWithEmailAndPassword(email , password).then((userAuth) =>{
         userAuth.user.updateProfile({
             displayName : name ,
             photoURL : photoURL
@@ -50,6 +50,16 @@ const register = (e) => {
     setEmail("");
     setPassword("");     
 }
+
+const signIn = (e) =>{
+    e.preventDefault();
+    if(!email){
+        return alert(" Email is required");
+    }
+    if(!password){
+        return alert("password is required");
+    }
+}
     return (
         <>
         <div className = "loginScreen">
@@ -66,9 +76,9 @@ const register = (e) => {
                 <h4>Already a member? <span onClick = {e => setSignUp(false)}>LogIn Here</span></h4>
             </form>) 
             :
-             (  <form>
-               <input type = "email" placeholder = "E-mail" />
-               <input type = "password" placeholder = "Password" />
+             (  <form onSubmit = {signIn}>
+               <input type = "email" placeholder = "E-mail"  value = {email} onChange ={e=> setEmail(e.target.value)} />
+               <input type = "password" placeholder = "Password" value = {password} onChange ={e=> setPassword(e.target.value)}/>
 
                <input type= "submit" value = "sign In" />
                <h4>Not a member? <span onClick = {e => setSignUp(true)}>Register Here</span></h4>
