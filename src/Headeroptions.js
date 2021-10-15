@@ -13,7 +13,7 @@ function Headeroptions({Icon , title, avatar}) {
                 Icon && <Icon></Icon>
             }
             {
-                avatar && <Avatar name= {avatar} src = {user.photoURL} onClick={firebase.auth().signOut()}/>
+                avatar && <Avatar name= {avatar} src = {user.photoURL} onClick={e=>firebase.auth().signOut()}/>
             }
            
             <span>{title}</span>
