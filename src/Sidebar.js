@@ -1,16 +1,20 @@
 import { Avatar } from '@material-ui/core'
 import React from 'react'
+import { useSelector } from 'react-redux'
 import "./css/sidebar.css"
+import { selectUser } from './features/userSlice'
 
 function Sidebar() {
+
+    const user = useSelector(selectUser)
     return (
         <div className = "sidebar">
             <div className = "sidebar__profile">
                 <img src = "https://www.freecodecamp.org/news/content/images/2021/06/w-qjCHPZbeXCQ-unsplash.jpg" />
 
                 <div className = "profile__details">
-                    <Avatar />
-                  <h4>Atul Patil</h4>
+                    <Avatar src = {user.photoURL} />
+                  <h4>{user.displayName}</h4>
                   <p>Web Devloper</p>
                 </div>
                 <div className = "profile__stats">

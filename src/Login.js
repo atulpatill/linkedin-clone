@@ -60,12 +60,14 @@ const signIn = (e) =>{
         return alert("password is required");
     }
 
+    // Here we did destructuring of user.
+
     auth.signInWithEmailAndPassword(email,password).then(({user}) =>{
         dispatch(loginuser({
             email: user.email,
             uid : user.uid,
             photoURL:user.photoURL,
-            displayName: user.name
+            displayName: user.displayname
             }))
     }).catch(error =>alert(error));
 }

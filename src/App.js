@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from "./Header";
 import Sidebar from './Sidebar';
 import Feed from './Feed';
 import Login from './Login';
-import { useSelector } from 'react-redux';
-import { selectUser } from './features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginuser, logoutuser, selectUser } from './features/userSlice';
+import { auth } from './firebase';
 
 
 
@@ -12,7 +13,27 @@ import { selectUser } from './features/userSlice';
 function App() {
   
 const user = useSelector(selectUser);
-console.log(user)
+const dispatch = useDispatch()
+
+useEffect(() => {
+  auth.onAuthStateChanged((userAuth) => {
+    if(userAuth){
+      // user is login
+      dispatch(loginuser({
+        email: userAuth.email,
+        uid : userAuth.uid,
+        photoURL:userAuth.photoURL,
+        displayName: userAuth.displayname
+        }))
+    }
+    else{
+      // user is logout
+      dispatch(logoutuser());
+    }
+  })
+},
+[])
+
   return (
     <>
     {
