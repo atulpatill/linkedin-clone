@@ -9,17 +9,20 @@ import './css/feed.css'
 import Post from './Post';
 import firebase from "firebase";
 import { db } from './firebase';
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
 
 function Feed(){
+    const user = useSelector(selectUser);
     const [posts , setPost ] = useState([]);
     const [input, setInput] = useState()
     const submitPost = (e) =>{
         e.preventDefault();
        db.collection("posts").add({
-           name : "Atul Patil",
+           name : user.displayName,
            description: "this is test",
            message: input,
-           photoURL: "https://i2.wp.com/ritsin.com/wp-content/uploads/2013/12/lord-krishna-saviour-of-pandavas1.jpeg?w=684",
+           photoURL: user.photoURL,
            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
        });
        setInput(" ")
@@ -36,7 +39,7 @@ function Feed(){
     return( <div className = "feed">
        <div className ="feed__input">
            <div className ="feed__form">
-           <Avatar/>
+           <Avatar src = {user.photoURL}/>
            <form  onSubmit ={submitPost}>
                <input type="text" placeholder =" Start a Post" value={input} onChange ={e=>setInput(e.target.value)}/>
                <input type ="submit" />

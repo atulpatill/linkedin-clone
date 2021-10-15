@@ -1,6 +1,7 @@
 import { Avatar } from '@material-ui/core'
 import React from 'react'
 import { useSelector } from 'react-redux'
+import firebase from 'firebase' ;
 import { selectUser } from './features/userSlice'
 
 function Headeroptions({Icon , title, avatar}) {
@@ -12,7 +13,7 @@ function Headeroptions({Icon , title, avatar}) {
                 Icon && <Icon></Icon>
             }
             {
-                avatar && <Avatar name= {avatar} src = {user.photoURl}/>
+                avatar && <Avatar name= {avatar} src = {user.photoURL} onClick={firebase.auth().signOut()}/>
             }
            
             <span>{title}</span>
