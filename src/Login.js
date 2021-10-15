@@ -62,12 +62,12 @@ const signIn = (e) =>{
 
     // Here we did destructuring of user.
 
-    auth.signInWithEmailAndPassword(email,password).then(({user}) =>{
+    auth.signInWithEmailAndPassword(email , password).then(({user}) =>{
         dispatch(loginuser({
             email: user.email,
             uid : user.uid,
             photoURL:user.photoURL,
-            displayName: user.displayname
+            displayName: user.displayName
             }))
     }).catch(error =>alert(error));
 }

@@ -23,7 +23,7 @@ useEffect(() => {
         email: userAuth.email,
         uid : userAuth.uid,
         photoURL:userAuth.photoURL,
-        displayName: userAuth.displayname
+        displayName: userAuth.displayName
         }))
     }
     else{
