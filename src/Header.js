@@ -17,7 +17,7 @@ function Header() {
         <div className = "header">
             <div className = "header__left">
                 <div className = "header__logo">
-                 <img src = "https://cdn-icons.flaticon.com/png/128/3536/premium/3536505.png?token=exp=1633848944~hmac=60c4423e04b9a96275fcd326d6b22469"/>
+                 <img src = "https://cdn-icons-png.flaticon.com/512/124/124011.png"/>
                 </div>
                 <div className = "header__search">
                   <SearchIcon />
