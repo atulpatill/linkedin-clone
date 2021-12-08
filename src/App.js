@@ -6,6 +6,7 @@ import Login from './Login';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginuser, logoutuser, selectUser } from './features/userSlice';
 import { auth } from './firebase';
+import Widget from './Widget';
 
 
 
@@ -44,7 +45,7 @@ useEffect(() => {
         <div className = "app_body">
           <Sidebar />
           <Feed />
-        
+          <Widget />
         </div>
 
    </div>
