@@ -5,6 +5,7 @@ import InfoIcon from '@material-ui/icons/Info';
 
 function Widget() {
     return (
+        <>
         <div className="widget">
             <div className="widget_top">
                 <div className="widget__header">
@@ -12,7 +13,7 @@ function Widget() {
                     <InfoIcon />
                 </div>
                 <div className="widget__body">
-                    <ul className="widget__option">
+                    <ul className="widget__options">
                         <li>
                             <h4>Slaying Job Search Fees</h4>
                             <p>6d ago * 2,89 readers</p>
@@ -44,7 +45,7 @@ function Widget() {
                     <InfoIcon />
                 </div>
                 <div className="widget__body">
-                    <ul className="widget__option">
+                    <ul className="widget__options">
                         <li>
                             <h4>Leading with healthy heal</h4>
                             <p>Gary vee</p>
@@ -71,6 +72,7 @@ function Widget() {
             </div>
             
         </div>
+        </>
     )
 }
 
