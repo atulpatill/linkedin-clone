@@ -22,6 +22,50 @@ function Widget() {
                             <h4>A Two Pizza rule for eating</h4>
                             <p>4d ago * 7,69 readers</p>
                         </li>
+                        <li>
+                            <h4>How to Handle a workplace breakup</h4>
+                            <p>3d ago * 5,97 readers</p>
+                        </li>
+                        <li>
+                            <h4>Flexi leave is the new flexi</h4>
+                            <p>2d ago * 4,02 readers</p>
+                        </li>
+                        <li>
+                            <h4>A Two Pizza rule for eating</h4>
+                            <p>4d ago * 2,36 readers</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div className="widget_bottom">
+                <div className="widget__header">
+                    <h4>Toaday's Top Courses</h4>
+                    <InfoIcon />
+                </div>
+                <div className="widget__body">
+                    <ul className="widget__option">
+                        <li>
+                            <h4>Leading with healthy heal</h4>
+                            <p>Gary vee</p>
+                        </li>
+
+                        <li>
+                            <h4>Clever mindset by Naval Ravikant</h4>
+                            <p>Naval Ravikant</p>
+                        </li>
+                        <li>
+                            <h4>Ankur Wariko's time management</h4>
+                            <p>Ankur Wariko</p>
+                        </li>
+                        <li>
+                            <h4>Karmyoga explained in bhagvat geeta</h4>
+                            <p>Bhagvat Geeta</p>
+                        </li>
+                        <li>
+                            <h4>Shorter hour boost productivity</h4>
+                            <p>Varun Mayya</p>
+                        </li>
                     </ul>
                 </div>
             </div>
